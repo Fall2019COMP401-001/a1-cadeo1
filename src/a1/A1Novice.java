@@ -30,7 +30,7 @@ public class A1Novice {
 						sum = sum + price[h] * quantity[h];						
 					}
 					total[i] = sum;
-					System.out.println(fName[i].charAt(0) + ". " + lName[i] + ": " + total[i]);
+					System.out.println(fName[i].charAt(0) + ". " + lName[i] + ": " + String.format("%.2f", total[i]));
 					}
 				
 			}
