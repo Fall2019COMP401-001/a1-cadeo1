@@ -35,7 +35,6 @@ public class A1Jedi {
 				if (itemname[h].equals(purchaseditem[g])) {
 					countofeach[h] += (quantity[g]);
 					customercount[h] +=1;
-					h = itemsinstore + 1;
 					}
 				}
 			}
