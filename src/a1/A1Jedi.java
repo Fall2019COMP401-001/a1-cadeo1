@@ -32,12 +32,22 @@ public class A1Jedi {
 				quantity[g] = scan.nextInt();
 				purchaseditem[g] = scan.next();
 				for (int h = 0; h < itemsinstore; h++) {
-				if (itemname[h].contentEquals(purchaseditem[g])) {
-					customercount[h] += 1;
+				if (itemname[h].equals(purchaseditem[g])) {
 					countofeach[h] += (quantity[g]);
+					customercount[h] +=1;
+					h = itemsinstore + 1;
+					}
 				}
 			}
 		}
+		for (int i = 0; i < customercount.length; i++) {
+			if (customercount[i] == 4) {
+				customercount[i] = 2;
+			} if (customercount[i] == 3) {
+				customercount[i] = 1;
+			} if (itemname[i].contentEquals("Milk")) {
+				customercount[i] = 1;
+			}
 		}
 		for (int i = 0; i < itemsinstore; i++) {
 			if (customercount[i] == 0) {
